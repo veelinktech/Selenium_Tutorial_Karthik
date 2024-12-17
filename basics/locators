@@ -1,0 +1,88 @@
+What is locator?
+to identify the web element.
+
+Selenium webdriver having 8 locators
+
+1) id
+2) name
+3) class name
+4) tag name
+5) link text
+6) partial link text
+7) x path
+8) css selector
+
+
+X-path:
+
+one of the locator to identify the web element.
+
+Two types of xpath:
+
+1) Relative xpath
+
+2) Absolute xpath
+
+1) Relative xpath
+    a. Single attribute
+    b. Multiple attribute
+    c. Text() function
+    d. contains() function ==> text(), attribute
+    e. starts-with() function ==> text(), attribute
+    f. normalize-space() function
+
+
+Single attribute:
+Sy:
+//tagname[@attribute = 'value']
+
+Eg1: //input[@id='email']
+Eg2: //input[@name='email']
+Eg3: //input[@class='inputtext _55r1 _6luy']
+Eg4: //input[@data-testid='royal_email']
+
+
+Multiple attribute:
+
+Sy: //tagname[@attribute ='value'][@attribute='value']
+
+//input[@class='_8esa'][@value='2']
+
+
+Text() function:
+
+//tagname[text()='value']
+//h2[text()='Facebook helps you connect and share with the people in your life.']
+//button[text()='Log in']
+
+
+Contains() --> Text()
+======================
+
+Sy: //tagname[contains(text(),'partial_value')]
+//h2[contains(text(),'your life')]
+//a[contains(text(),'got')]
+
+Starts_with() --> Text()
+=========================
+Sy: //tagname[starts-with(text(),'starting-value')]
+
+//h2[starts-with(text(),'F')]
+//a[starts-with(text(),'Fo')]
+
+
+Contains() ==> attribute
+=========================
+Sy: //tagname[contains(@attribute='partial_value')]
+//a[contains(@id,'_0_')]
+
+Starts-with() ===> attribute
+=============================
+Sy: //tagname[starts-with(@attribute='starting_value')]
+//a[starts-with(@id,'u_0_')]
+
+
+normalize-space
+==================
+Sy://tagname[normalize-space(text()='value')]
+//button[normalize-space(text()='Login')]

@@ -1,0 +1,9 @@
+What is marker?
+
+Group the test scripts.
+
+Two types markers.
+
+User define marker --> any name
+
+built in markers --> skip, parameterize, skipif, xfail, usefixtures, filterswarning
